@@ -30,7 +30,7 @@ namespace CRUDProjectSQL
         {
             int numberOfRowsAffected;
 
-            using (var connect = new SQLiteConnection("Data Source=C:\\Users\\Admin\\Desktop\\SQLiteStudio\\bookstores.db"))
+            using (var connect = new SQLiteConnection("Data Source=your_path/bookstores.db"))
             {
                 connect.Open();
                 using (var command = new SQLiteCommand(query, connect))
@@ -69,7 +69,7 @@ namespace CRUDProjectSQL
 
         private static DataTable GetUserById(int id)
         {
-            using (var connect = new SQLiteConnection("Data Source=C:\\Users\\Admin\\Desktop\\SQLiteStudio\\bookstores.db"))
+            using (var connect = new SQLiteConnection("Data Source=your_path/bookstores.db"))
             {
                 connect.Open();
                 var query = "SELECT * FROM Users WHERE id = @id";
